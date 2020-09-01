@@ -13,8 +13,8 @@ int main()
 
     //can also use unsigned short, but cba.
     short age;
-    short ageLimit = 20;
-    short maxAge = 150;
+    constexpr short ageLimit = 20;
+    constexpr short maxAge = 150;
     cout << "What is your age? ";
     cin >> age;
     if (age > maxAge or age < (short)0 or !cin)
