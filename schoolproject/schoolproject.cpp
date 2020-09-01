@@ -6,11 +6,7 @@
 #include <Windows.h>
 using namespace std;
 
-
-void Baby()
-{
-    cout << "You are still a baby";
-}
+#define IFELSE
 int main()
 {
 #if defined IFELSE
