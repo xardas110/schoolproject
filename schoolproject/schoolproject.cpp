@@ -19,8 +19,24 @@ int main()
             return -1;
     }
     if (age >= ageLimit)
+    { 
         cout << "You are an adult";
-    else
+        return 1;
+    }
+    if (age >= 0 and age <= 3)
+    { 
+        cout << "You are still a baby";
+        return 1;
+    }
+    if (age > 3 and age < 10)
+    {
+        cout << "You are a child";
+        return 1;
+    }
+    if (age >= 10 and age < ageLimit)
+    { 
         cout << "You are a teenager";
-
+        return 1;
+    }
+    //Can also use an array for better performance
 }
