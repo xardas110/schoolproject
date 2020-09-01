@@ -6,12 +6,12 @@
 using namespace std;
 int main()
 {
-    int age;
+    short age;
     cout << "What is your age? ";
     cin >> age;
-    if (age >= 20)
-        cout << "\nYou are an adult";
+    if (age >= (short)20)
+        cout << "You are an adult";
     else
-        cout << "\nYou are a teenager";
+        cout << "You are a teenager";
 
 }
