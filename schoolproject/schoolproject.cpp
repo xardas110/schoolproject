@@ -5,7 +5,7 @@
 #include <vector>
 #include <Windows.h>
 using namespace std;
-
+#undef max
 int main()
 {
 #if defined IFELSE
@@ -20,6 +20,7 @@ int main()
     if (age > maxAge or age < (short)0 or !cin)
     { 
         cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         system("CLS");
         cout << "Invalid Input\n";
         goto label;
@@ -72,6 +73,7 @@ int main()
     if (currentAge < 0 or currentAge >= ageLimit or !cin)
     {     
         cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         system("CLS");
         cout << "Invalid Input\n";
         goto label;
