@@ -78,7 +78,7 @@ int main()
         cout << "Invalid Input\n";
         goto label;
     }
-
+    system("cls");
     cout << (const char*)ageArray[currentAge] << endl;
 
 #endif
