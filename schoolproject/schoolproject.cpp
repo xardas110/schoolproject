@@ -13,7 +13,7 @@ int main()
     short maxAge = 150;
     cout << "What is your age? ";
     cin >> age;
-    if (age > maxAge or age < 0)
+    if (age > maxAge or age < (short)0)
     { 
         cout << "Invalid input";
             return -1;
@@ -23,17 +23,17 @@ int main()
         cout << "You are an adult";
         return 1;
     }
-    if (age >= 0 and age <= 3)
+    if (age >= (short)0 and age <= (short)3)
     { 
         cout << "You are still a baby";
         return 1;
     }
-    if (age > 3 and age < 10)
+    if (age > (short)3 and age < (short)10)
     {
         cout << "You are a child";
         return 1;
     }
-    if (age >= 10 and age < ageLimit)
+    if (age >= (short)10 and age < ageLimit)
     { 
         cout << "You are a teenager";
         return 1;
