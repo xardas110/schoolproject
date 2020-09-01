@@ -17,7 +17,7 @@ int main()
     short maxAge = 150;
     cout << "What is your age? ";
     cin >> age;
-    if (age > maxAge or age < (short)0)
+    if (age > maxAge or age < (short)0 or !cin)
     { 
         cout << "Invalid input";
             return -1;
@@ -65,7 +65,7 @@ int main()
     cout << "What's your age? ";
     cin >> currentAge;
 
-    if (currentAge < 0 or currentAge >= ageLimit)
+    if (currentAge < 0 or currentAge >= ageLimit or !cin)
     { 
         cout << "Invalid Input";
         return -1;
