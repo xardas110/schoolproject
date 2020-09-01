@@ -6,7 +6,6 @@
 #include <Windows.h>
 using namespace std;
 
-#define IFELSE
 int main()
 {
 #if defined IFELSE
@@ -15,19 +14,23 @@ int main()
     short age;
     constexpr short ageLimit = 20;
     constexpr short maxAge = 150;
+    label:
     cout << "What is your age? ";
     cin >> age;
     if (age > maxAge or age < (short)0 or !cin)
     { 
-        cout << "Invalid input";
-            return -1;
+        cin.clear();
+        system("CLS");
+        cout << "Invalid Input\n";
+        goto label;
+        return -1;
     }
     if (age >= ageLimit)
     { 
         cout << "You are an adult";
         return 1;
     }
-    if (age >= (short)10 and age < ageLimit)
+    if (age >= (short)13 and age < ageLimit)
     {
         cout << "You are a teenager";
         return 1;
@@ -37,7 +40,7 @@ int main()
         cout << "You are still a baby";
         return 1;
     }
-    if (age > (short)3 and age < (short)10)
+    if (age >= (short)3 and age < (short)13)
     {
         cout << "You are a child";
         return 1;
@@ -55,23 +58,27 @@ int main()
 
     for (int i = 0; i < 4; i++)
         ageArray[i] = (DWORD)baby;
-    for (int i = 4; i < 10; i++)
+    for (int i = 4; i < 13; i++)
         ageArray[i] = (DWORD)child;
-    for (int i = 10; i < 20; i++)
+    for (int i = 13; i < 20; i++)
         ageArray[i] = (DWORD)teenager;
     for (unsigned __int8 i = (unsigned __int8)20; i < ageLimit; i++)
         ageArray[i] = (DWORD)adult;
     
+    label:
     cout << "What's your age? ";
     cin >> currentAge;
 
     if (currentAge < 0 or currentAge >= ageLimit or !cin)
-    { 
-        cout << "Invalid Input";
-        return -1;
+    {     
+        cin.clear();
+        system("CLS");
+        cout << "Invalid Input\n";
+        goto label;
     }
 
     cout << (const char*)ageArray[currentAge] << endl;
 
 #endif
+    cin.clear();
 }
